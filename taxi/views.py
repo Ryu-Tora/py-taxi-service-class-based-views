@@ -26,7 +26,7 @@ class ManufacturerListView(generic.ListView):
 
 class CarListView(generic.ListView):
     model = Car
-    queryset = Car.objects.select_related("manufacturer").order_by("name")
+    queryset = Car.objects.select_related("manufacturer").order_by("model")
     context_object_name = "car_list"
     paginate_by = 5
     template_name = "taxi/car_list.html"
