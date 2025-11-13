@@ -22,7 +22,7 @@ urlpatterns = [
     path(
         "cars/<int:pk>/",
         CarDetailView.as_view(),
-        name="car"),
+        name="car-detail"),
     path(
         "drivers/",
         DriverListView.as_view(),
@@ -30,7 +30,7 @@ urlpatterns = [
     path(
         "drivers/<int:pk>/",
         DriverDetailView.as_view(),
-        name="driver"),
+        name="driver-detail"),
 ]
 
 app_name = "taxi"

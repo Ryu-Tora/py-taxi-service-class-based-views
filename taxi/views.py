@@ -40,6 +40,7 @@ class CarDetailView(generic.DetailView):
 
 class DriverListView(generic.ListView):
     model = Driver
+    queryset = Driver.objects.order_by("username")
     context_object_name = "driver-list"
     paginate_by = 5
     template_name = "taxi/driver_list.html"
