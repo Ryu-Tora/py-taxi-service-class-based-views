@@ -10,7 +10,7 @@
 {% if object.car_set.all %}
 <ul>
     {% for car in object.car_set.all %}
-        <li>{{ car.name }}</li>
+        <li>{{ car.name }} ({{ car.manufacturer.name }})</li>
     {% endfor %}
 </ul>
 {% else %}
