@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Car: {{ object.model }}</h1>
+<h1>Car: {{ car_detail.model }}</h1>
 
-<p><strong>Manufacturer Name:</strong> {{ object.manufacturer.name }}</p>
-<p><strong>Country:</strong> {{ object.manufacturer.country }}</p>
+<p><strong>Manufacturer Name:</strong> {{ car_detail.manufacturer.name }}</p>
+<p><strong>Country:</strong> {{ car_detail.manufacturer.country }}</p>
 
 <h2>Drivers of this car</h2>
 
-{% if object.drivers.all %}
+{% if car_detail.drivers.all %}
 <ul>
-    {% for driver in object.drivers.all %}
+    {% for driver in car_detail.drivers.all %}
         <li><a href="{% url 'driver' driver.id %}">{{ driver.username }}</a></li>
     {% endfor %}
 </ul>
