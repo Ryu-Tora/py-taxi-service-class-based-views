@@ -11,7 +11,7 @@
 {% if car_detail.drivers.all %}
 <ul>
     {% for driver in car_detail.drivers.all %}
-        <li><a href="{% url 'driver' driver.id %}">{{ driver.username }}</a></li>
+        <li><a href="{% url 'taxi:driver-detail' driver.id %}">{{ driver.username }}</a></li>
     {% endfor %}
 </ul>
 {% else %}
