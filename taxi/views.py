@@ -50,6 +50,6 @@ class DriverDetailView(generic.DetailView):
     model = Driver
     context_object_name = "driver_detail"
     queryset = Driver.objects.prefetch_related(
-        "car_set__manufacturer"
+        "cars__manufacturer"
     ).order_by("username")
     template_name = "taxi/driver_detail.html"
