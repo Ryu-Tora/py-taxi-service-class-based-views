@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Driver: {{ object.username }}</h1>
+<h1>Driver: {{ driver.username }}</h1>
 
-<p><strong>First Name:</strong> {{ object.first_name }}</p>
-<p><strong>Last Name:</strong> {{ object.last_name }}</p>
-<p><strong>E-mail:</strong> {{ object.email }}</p>
+<p><strong>First Name:</strong> {{ driver.first_name }}</p>
+<p><strong>Last Name:</strong> {{ driver.last_name }}</p>
+<p><strong>E-mail:</strong> {{ driver.email }}</p>
 
 {% if object.car_set.all %}
 <ul>
-    {% for car in object.car_set.all %}
-        <li>{{ car.name }} ({{ car.manufacturer.name }})</li>
+    {% for car in driver.cars.all %}
+        <li>{{ car.model }} ({{ car.manufacturer.name }})</li>
     {% endfor %}
 </ul>
 {% else %}
